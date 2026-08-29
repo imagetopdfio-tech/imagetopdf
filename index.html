@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ImageToPDF.io — Free Image to PDF Converter</title>
+
+    <meta name="description"
+          content="Convert JPG, JPEG, PNG and WEBP images to PDF online for free. Fast, simple and privacy-friendly image to PDF converter.">
+
+    <meta name="keywords"
+          content="image to pdf, jpg to pdf, png to pdf, jpeg to pdf, image converter, free pdf converter">
+
+    <meta name="author" content="ImageToPDF.io">
+
+    <link rel="canonical" href="https://imagetopdf.io/">
+
+    <meta property="og:title"
+          content="ImageToPDF.io — Free Image to PDF Converter">
+
+    <meta property="og:description"
+          content="Convert images to PDF quickly and easily with ImageToPDF.io.">
+
+    <meta property="og:url" content="https://imagetopdf.io/">
+
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PDF Library -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+    </script>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="#" class="logo" onclick="showPage('home')">
+        Image<span>ToPDF</span>
+    </a>
+
+    <nav id="navMenu">
+
+        <a href="#" onclick="showPage('home')">Home</a>
+
+        <a href="#" onclick="showPage('about')">About</a>
+
+        <a href="#" onclick="showPage('blog')">Blog</a>
+
+        <a href="#" onclick="showPage('contact')">Contact</a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+        <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle theme">
+            ◐
+        </button>
+
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<main id="home" class="page active">
+
+    <section class="hero">
+
+        <div class="badge">
+            ✦ Free Online PDF Tool
+        </div>
+
+        <h1>
+            Convert images into
+            <span>PDF.</span>
+        </h1>
+
+        <p>
+            A simple and fast way to turn JPG, JPEG, PNG and WEBP images
+            into a PDF document directly in your browser.
+        </p>
+
+    </section>
+
+
+    <!-- TOOL -->
+
+    <section class="tool-section">
+
+        <div class="tool-card">
+
+            <div
+                id="dropZone"
+                class="drop-zone"
+                onclick="document.getElementById('fileInput').click()"
+            >
+
+                <div class="upload-content">
+
+                    <div class="upload-icon">
+                        ↑
+                    </div>
+
+                    <h2>
+                        Choose Images
+                    </h2>
+
+                    <p>
+                        JPG, JPEG, PNG or WEBP
+                    </p>
+
+                    <button
+                        class="choose-btn"
+                        type="button"
+                        onclick="event.stopPropagation(); document.getElementById('fileInput').click()"
+                    >
+                        Choose Images
+                    </button>
+
+                </div>
+
+            </div>
+
+            <input
+                id="fileInput"
+                type="file"
+                accept="image/jpeg,image/png,image/webp"
+                multiple
+            >
+
+            <div id="fileList" class="file-list"></div>
+
+            <button
+                id="convertBtn"
+                class="convert-btn"
+                onclick="createPDF()"
+                disabled
+            >
+                Convert to PDF
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- AD PLACEHOLDER -->
+
+    <div class="container">
+        <div class="ad-box">
+            Advertisement
+        </div>
+    </div>
+
+
+    <!-- FEATURES -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Everything you need
+            </h2>
+
+            <p class="section-description">
+                Convert your images without complicated software.
+            </p>
+
+            <div class="feature-grid">
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">⚡</div>
+
+                    <h3>Fast</h3>
+
+                    <p>
+                        Convert your images to PDF quickly from your browser.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">🔒</div>
+
+                    <h3>Privacy Friendly</h3>
+
+                    <p>
+                        Images are processed locally in your browser by this tool.
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">📱</div>
+
+                    <h3>Mobile Friendly</h3>
+
+                    <p>
+                        Use ImageToPDF on phones, tablets and computers.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                How it works
+            </h2>
+
+            <div class="steps">
+
+                <div class="step">
+                    <strong>01</strong>
+                    <h3>Select</h3>
+                    <p>Choose one or more images.</p>
+                </div>
+
+                <div class="step">
+                    <strong>02</strong>
+                    <h3>Convert</h3>
+                    <p>Press Convert to PDF.</p>
+                </div>
+
+                <div class="step">
+                    <strong>03</strong>
+                    <h3>Download</h3>
+                    <p>Your PDF will download automatically.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="page">
+
+    <div class="container">
+
+        <article class="content-card">
+
+            <h1>About ImageToPDF</h1>
+
+            <p>
+                Welcome to ImageToPDF.io, a simple online utility website
+                created to make everyday document and image tasks easier.
+            </p>
+
+            <p>
+                Our goal is to provide straightforward browser-based tools
+                that anyone can use without installing complicated software.
+            </p>
+
+            <h2>Our Mission</h2>
+
+            <p>
+                We want to build useful, accessible and easy-to-understand
+                online tools for students, professionals, businesses and
+                everyday internet users.
+            </p>
+
+            <h2>ImageToPDF</h2>
+
+            <p>
+                Our main tool allows users to convert supported image formats
+                into PDF documents directly in their browser.
+            </p>
+
+            <h2>Future Tools</h2>
+
+            <p>
+                We plan to expand ImageToPDF.io with additional image,
+                document and productivity utilities.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BLOG ================= -->
+
+<section id="blog" class="page">
+
+    <div class="container">
+
+        <h1 class="section-title">
+            Image & PDF Guides
+        </h1>
+
+        <p class="section-description">
+            Helpful guides and practical tips about images, PDFs and digital files.
+        </p>
+
+
+        <div class="blog-grid">
+
+            <article class="blog-card">
+                <div class="blog-number">01</div>
+                <h2>How to Convert JPG to PDF</h2>
+                <p>
+                    Learn how to turn JPG images into a PDF document using
+                    simple online and offline methods.
+                </p>
+            </article>
+
+
+            <article class="blog-card">
+                <div class="blog-number">02</div>
+                <h2>How to Convert PNG to PDF</h2>
+                <p>
+                    A beginner-friendly guide to converting PNG images
+                    into PDF documents.
+                </p>
+            </article>
+
+
+            <article class="blog-card">
+                <div class="blog-number">03</div>
+                <h2>JPG vs PNG: What Is the Difference?</h2>
+                <p>
+                    Understand the differences between JPG and PNG and
+                    learn when each format is useful.
+                </p>
+            </article>
+
+
+            <article class="blog-card">
+                <div class="blog-number">04</div>
+                <h2>How to Create a PDF on Your Phone</h2>
+                <p>
+                    Learn practical ways to create PDF documents using
+                    images stored on your smartphone.
+                </p>
+            </article>
+
+
+            <article class="blog-card">
+                <div class="blog-number">05</div>
+                <h2>What Is a PDF File?</h2>
+                <p>
+                    A simple explanation of PDF files, their advantages
+                    and common uses.
+                </p>
+            </article>
+
+
+            <article class="blog-card">
+                <div class="blog-number">06</div>
+                <h2>How to Reduce Image File Size</h2>
+                <p>
+                    Learn practical techniques for reducing image sizes
+                    while keeping acceptable quality.
+                </p>
+            </article>
+
+
+            <article class="blog-card">
+                <div class="blog-number">07</div>
+                <h2>Best Image Formats for Documents</h2>
+                <p>
+                    Compare popular image formats and discover which
+                    formats work well for digital documents.
+                </p>
+            </article>
+
+
+            <article class="blog-card">
+                <div class="blog-number">08</div>
+                <h2>How to Combine Multiple Images into One PDF</h2>
+                <p>
+                    Learn how multiple images can be arranged into a
+                    single PDF document.
+                </p>
+            </article>
+
+
+            <article class="blog-card">
+                <div class="blog-number">09</div>
+                <h2>How to Convert Photos into Documents</h2>
+                <p>
+                    Useful tips for turning photographs and scanned images
+                    into shareable documents.
+                </p>
+            </article>
+
+
+            <article class="blog-card">
+                <div class="blog-number">10</div>
+                <h2>How to Scan Documents with a Smartphone</h2>
+                <p>
+                    Practical tips for taking clear document photos with
+                    your phone.
+                </p>
+            </article>
+
+
+            <article class="blog-card">
+                <div class="blog-number">11</div>
+                <h2>PDF vs Image: Which Should You Use?</h2>
+                <p>
+                    Understand the differences between image files and
+                    PDFs for everyday document sharing.
+                </p>
+            </article>
+
+
+            <article class="blog-card">
+                <div class="blog-number">12</div>
+                <h2>How to Make a PDF Easier to Share</h2>
+                <p>
+                    Simple file-management tips for sharing documents
+                    online and through messaging apps.
+                </p>
+            </article>
+
+
+            <article class="blog-card">
+                <div class="blog-number">13</div>
+                <h2>Common PDF Problems and Simple Solutions</h2>
+                <p>
+                    Explore common PDF problems and practical ways to
+                    troubleshoot them.
+                </p>
+            </article>
+
+
+            <article class="blog-card">
+                <div class="blog-number">14</div>
+                <h2>How to Organize Digital Documents</h2>
+                <p>
+                    Simple organization techniques that can help keep
+                    digital files easier to find.
+                </p>
+            </article>
+
+
+            <article class="blog-card">
+                <div class="blog-number">15</div>
+                <h2>Tips for Creating Better Digital Documents</h2>
+                <p>
+                    Learn basic formatting and file-management practices
+                    for cleaner digital documents.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="page">
+
+    <div class="container">
+
+        <article class="content-card">
+
+            <h1>Contact Us</h1>
+
+            <p>
+                If you have a question, suggestion, feedback or notice an
+                issue with one of our tools, feel free to contact us.
+            </p>
+
+            <div class="contact-box">
+
+                <span>Email</span>
+
+                <a href="mailto:imagetopdfio@gmail.com">
+                    imagetopdfio@gmail.com
+                </a>
+
+            </div>
+
+            <p>
+                We aim to review messages and respond when possible.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRIVACY ================= -->
+
+<section id="privacy" class="page">
+
+    <div class="container">
+
+        <article class="content-card">
+
+            <h1>Privacy Policy</h1>
+
+            <p>
+                Last updated: August 2026
+            </p>
+
+            <h2>Information We Process</h2>
+
+            <p>
+                The ImageToPDF conversion tool is designed to process selected
+                images locally in the user's browser. The current conversion
+                process does not intentionally upload selected images to our
+                server.
+            </p>
+
+            <h2>Cookies</h2>
+
+            <p>
+                ImageToPDF.io may use cookies or similar technologies through
+                advertising, analytics or other third-party services.
+            </p>
+
+            <h2>Advertising</h2>
+
+            <p>
+                We may display advertisements from third-party advertising
+                providers. These providers may use technologies permitted by
+                their own policies.
+            </p>
+
+            <h2>Third-Party Services</h2>
+
+            <p>
+                Third-party services may collect information according to
+                their own privacy policies. Users should review the relevant
+                third-party policies where applicable.
+            </p>
+
+            <h2>Contact</h2>
+
+            <p>
+                Privacy questions can be sent to:
+                imagetopdfio@gmail.com
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TERMS ================= -->
+
+<section id="terms" class="page">
+
+    <div class="container">
+
+        <article class="content-card">
+
+            <h1>Terms & Conditions</h1>
+
+            <p>
+                By using ImageToPDF.io, you agree to use the website and its
+                tools responsibly and according to applicable laws.
+            </p>
+
+            <h2>Use of the Service</h2>
+
+            <p>
+                You are responsible for the files you choose to process and
+                for ensuring that you have the necessary rights to use them.
+            </p>
+
+            <h2>Service Availability</h2>
+
+            <p>
+                We try to keep our services available and functional, but
+                uninterrupted availability cannot be guaranteed.
+            </p>
+
+            <h2>Changes</h2>
+
+            <p>
+                We may update these terms when our website, tools or policies
+                change.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DISCLAIMER ================= -->
+
+<section id="disclaimer" class="page">
+
+    <div class="container">
+
+        <article class="content-card">
+
+            <h1>Disclaimer</h1>
+
+            <p>
+                ImageToPDF.io provides online utilities and informational
+                content for general purposes.
+            </p>
+
+            <p>
+                Although we try to maintain reliable tools, we do not
+                guarantee that every conversion or website feature will
+                always be error-free or available.
+            </p>
+
+            <p>
+                Users should verify important documents and files before
+                relying on them for critical purposes.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div>
+
+            <a href="#" class="logo">
+                Image<span>ToPDF</span>
+            </a>
+
+            <p>
+                Simple online tools for everyday digital files.
+            </p>
+
+            <small>
+                © 2026 ImageToPDF.io. All rights reserved.
+            </small>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#" onclick="showPage('privacy')">
+                Privacy Policy
+            </a>
+
+            <a href="#" onclick="showPage('terms')">
+                Terms
+            </a>
+
+            <a href="#" onclick="showPage('disclaimer')">
+                Disclaimer
+            </a>
+
+            <a href="#" onclick="showPage('contact')">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
