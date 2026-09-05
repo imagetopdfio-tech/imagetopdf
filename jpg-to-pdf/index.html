@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,9 +9,13 @@
     <meta name="description"
           content="Convert JPG images to PDF online for free. Fast, simple and privacy-friendly JPG to PDF converter.">
 
-    <link rel="canonical" href="https://imagetopdf.io/jpg-to-pdf/">
+    <link rel="canonical"
+          href="https://imagetopdf.io/jpg-to-pdf/">
 
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet"
+          href="../style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
 <body>
@@ -29,92 +33,157 @@
 
 </header>
 
+
 <main>
 
-    <section class="hero">
+<section class="hero">
 
-        <div class="badge">
-            ✦ Free Online PDF Tool
-        </div>
+    <div class="badge">
+        ✦ Free Online PDF Tool
+    </div>
 
-        <h1>
-            JPG to PDF Converter
-        </h1>
+    <h1>
+        JPG to PDF Converter
+    </h1>
 
-        <p>
-            Convert JPG images to PDF online for free.
-            Upload your JPG images and create a PDF document quickly
-            and easily in your browser.
-        </p>
+    <p>
+        Convert JPG images to PDF online for free.
+        Your images are processed directly in your browser.
+    </p>
 
-    </section>
+</section>
 
-    <section class="section">
 
-        <div class="container">
+<section class="tool-section">
 
-            <h2>How to Convert JPG to PDF</h2>
+    <div class="tool-card">
 
-            <p>
-                Converting a JPG image to PDF is simple with ImageToPDF.io.
-                Select your JPG images, convert them into a PDF document,
-                and download the finished file.
-            </p>
+        <div
+            id="dropZone"
+            class="drop-zone"
+            onclick="document.getElementById('fileInput').click()"
+        >
 
-            <div class="steps">
+            <div class="upload-content">
 
-                <div class="step">
-                    <strong>01</strong>
-                    <h3>Select JPG Images</h3>
-                    <p>Choose one or more JPG images from your device.</p>
+                <div class="upload-icon">
+                    ↑
                 </div>
 
-                <div class="step">
-                    <strong>02</strong>
-                    <h3>Convert to PDF</h3>
-                    <p>Convert your selected JPG images into a PDF.</p>
-                </div>
+                <h2>
+                    Choose JPG Images
+                </h2>
 
-                <div class="step">
-                    <strong>03</strong>
-                    <h3>Download</h3>
-                    <p>Download your new PDF document.</p>
-                </div>
+                <p>
+                    JPG or JPEG
+                </p>
+
+                <button
+                    class="choose-btn"
+                    type="button"
+                    onclick="event.stopPropagation(); document.getElementById('fileInput').click()"
+                >
+                    Choose Images
+                </button>
 
             </div>
 
         </div>
 
-    </section>
 
-    <section class="section">
+        <input
+            id="fileInput"
+            type="file"
+            accept="image/jpeg"
+            multiple
+        >
 
-        <div class="container">
 
-            <h2>Why Use Our JPG to PDF Converter?</h2>
+        <div id="fileList" class="file-list"></div>
 
-            <p>
-                ImageToPDF.io provides a simple browser-based way to convert
-                JPG images into PDF documents without complicated software.
-            </p>
 
-            <p>
-                The conversion tool is designed to work on phones, tablets
-                and computers, making it convenient for everyday document
-                tasks.
-            </p>
+        <button
+            id="convertBtn"
+            class="convert-btn"
+            onclick="createPDF()"
+            disabled
+        >
+            Convert to PDF
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <h2>How to Convert JPG to PDF</h2>
+
+        <p>
+            Select one or more JPG images above, then click
+            Convert to PDF. Your PDF will be created directly
+            in your browser and downloaded automatically.
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+                <strong>01</strong>
+                <h3>Select JPG Images</h3>
+                <p>Choose one or more JPG images.</p>
+            </div>
+
+            <div class="step">
+                <strong>02</strong>
+                <h3>Convert</h3>
+                <p>Click Convert to PDF.</p>
+            </div>
+
+            <div class="step">
+                <strong>03</strong>
+                <h3>Download</h3>
+                <p>Your PDF downloads automatically.</p>
+            </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <h2>JPG to PDF Online for Free</h2>
+
+        <p>
+            ImageToPDF.io makes it easy to convert JPG images
+            into PDF documents without installing additional software.
+        </p>
+
+        <p>
+            The conversion is performed in your browser, making
+            the tool convenient for phones, tablets and computers.
+        </p>
+
+    </div>
+
+</section>
 
 </main>
+
 
 <footer>
 
     <div class="container footer-content">
 
         <div>
+
             <a href="/" class="logo">
                 Image<span>ToPDF</span>
             </a>
@@ -122,11 +191,19 @@
             <p>
                 Simple online tools for everyday digital files.
             </p>
+
+            <small>
+                © 2026 ImageToPDF.io. All rights reserved.
+            </small>
+
         </div>
 
     </div>
 
 </footer>
+
+
+<script src="../script.js"></script>
 
 </body>
 </html>
