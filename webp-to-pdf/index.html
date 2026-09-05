@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WEBP to PDF Converter – Free Online | ImageToPDF.io</title>
+
+    <meta name="description"
+          content="Convert WEBP images to PDF online for free. Fast, simple and privacy-friendly WEBP to PDF converter.">
+
+    <meta name="keywords"
+          content="webp to pdf, convert webp to pdf, webp to pdf converter, free webp to pdf">
+
+    <meta name="author" content="ImageToPDF.io">
+
+    <link rel="canonical"
+          href="https://imagetopdf.io/webp-to-pdf/">
+
+    <link rel="icon"
+          type="image/png"
+          href="../favicon.png">
+
+    <link rel="stylesheet"
+          href="../style.css">
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+    </script>
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="../" class="logo">
+        Image<span>ToPDF</span>
+    </a>
+
+    <nav id="navMenu">
+
+        <a href="../">Home</a>
+
+        <a href="../jpg-to-pdf/">JPG to PDF</a>
+
+        <a href="../png-to-pdf/">PNG to PDF</a>
+
+        <a href="../image-to-pdf/">Image to PDF</a>
+
+        <a href="./">WEBP to PDF</a>
+
+        <a href="../blog/">Blog</a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+        <button
+            class="icon-btn"
+            onclick="toggleTheme()"
+            aria-label="Toggle theme">
+            ◐
+        </button>
+
+        <button
+            class="menu-btn"
+            onclick="toggleMenu()"
+            aria-label="Menu">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="page active">
+
+    <section class="hero">
+
+        <div class="badge">
+            ✦ Free Online WEBP to PDF Tool
+        </div>
+
+        <h1>
+            Convert WEBP to
+            <span>PDF.</span>
+        </h1>
+
+        <p>
+            Convert WEBP images into PDF documents quickly and easily.
+            Your images are processed directly in your browser.
+        </p>
+
+    </section>
+
+
+    <section class="tool-section">
+
+        <div class="tool-card">
+
+            <div
+                id="dropZone"
+                class="drop-zone"
+                onclick="document.getElementById('fileInput').click()">
+
+                <div class="upload-content">
+
+                    <div class="upload-icon">
+                        ↑
+                    </div>
+
+                    <h2>
+                        Choose WEBP Images
+                    </h2>
+
+                    <p>
+                        WEBP files only
+                    </p>
+
+                    <button
+                        class="choose-btn"
+                        type="button"
+                        onclick="event.stopPropagation(); document.getElementById('fileInput').click()">
+
+                        Choose Images
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <input
+                id="fileInput"
+                type="file"
+                accept="image/webp"
+                multiple>
+
+
+            <div
+                id="fileList"
+                class="file-list">
+            </div>
+
+
+            <button
+                id="convertBtn"
+                class="convert-btn"
+                onclick="createPDF()"
+                disabled>
+
+                Convert to PDF
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <div class="container">
+
+        <div class="ad-box">
+            Advertisement
+        </div>
+
+    </div>
+
+
+    <section class="section">
+
+        <div class="container">
+
+            <article class="content-card">
+
+                <h2>WEBP to PDF Converter</h2>
+
+                <p>
+                    ImageToPDF.io provides a simple online way to convert
+                    WEBP images into PDF files without installing additional
+                    software.
+                </p>
+
+                <p>
+                    Select one or more WEBP images and click Convert to PDF
+                    to create a single PDF document.
+                </p>
+
+
+                <h2>How to Convert WEBP to PDF</h2>
+
+                <p>
+                    1. Click Choose Images and select your WEBP files.
+                </p>
+
+                <p>
+                    2. Review the selected images.
+                </p>
+
+                <p>
+                    3. Click Convert to PDF.
+                </p>
+
+                <p>
+                    4. Your PDF file will download automatically.
+                </p>
+
+
+                <h2>Is the WEBP to PDF Converter Free?</h2>
+
+                <p>
+                    Yes. You can use this WEBP to PDF converter online
+                    without installing desktop software.
+                </p>
+
+
+                <h2>Are My WEBP Images Uploaded?</h2>
+
+                <p>
+                    The conversion is designed to happen locally in
+                    your browser. Selected images are not intentionally
+                    uploaded to our server during the conversion process.
+                </p>
+
+
+                <h2>Why Convert WEBP to PDF?</h2>
+
+                <p>
+                    PDF files are useful for sharing, printing and
+                    organizing images into a single document.
+                    Converting WEBP images to PDF can make them easier
+                    to manage and share.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div>
+
+            <a href="../" class="logo">
+                Image<span>ToPDF</span>
+            </a>
+
+            <p>
+                Simple online tools for everyday digital files.
+            </p>
+
+            <small>
+                © 2026 ImageToPDF.io. All rights reserved.
+            </small>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="../">
+                Home
+            </a>
+
+            <a href="../jpg-to-pdf/">
+                JPG to PDF
+            </a>
+
+            <a href="../png-to-pdf/">
+                PNG to PDF
+            </a>
+
+            <a href="../image-to-pdf/">
+                Image to PDF
+            </a>
+
+            <a href="../contact/">
+                Contact
+            </a>
+
+            <a href="../privacy-policy/">
+                Privacy Policy
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="../script.js"></script>
+
+</body>
+  </html>
