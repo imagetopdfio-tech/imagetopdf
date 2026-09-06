@@ -41,8 +41,14 @@
   <loc>https://imagetopdf.io/disclaimer/</loc>
 </url>
 
-  <url>
+    <url>
   <loc>https://imagetopdf.io/blog/</loc>
-</url>
+  </url>
+
+  <url>
+  <loc>https://imagetopdf.io/blog/how-to-convert-jpg-to-pdf/</loc>
+  </url>
   
 </urlset>
+  
+
