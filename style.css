@@ -1483,3 +1483,102 @@ footer .footer-logo .footer-logo-black {
 footer .footer-logo span:not(.footer-logo-black) {
     color: #007aff !important;
 }
+
+/* ================= ABOUT DESCRIPTION TOGGLE ================= */
+
+.about-toggle-card {
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.about-toggle summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 22px 24px;
+    cursor: pointer;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #111111;
+}
+
+.about-toggle summary::-webkit-details-marker {
+    display: none;
+}
+
+.about-toggle-icon {
+    position: relative;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #eff6ff;
+}
+
+.about-toggle-icon::before,
+.about-toggle-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 2px;
+    border-radius: 2px;
+    background: #007aff;
+    transform: translate(-50%, -50%);
+}
+
+.about-toggle-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.about-toggle[open] .about-toggle-icon::after {
+    display: none;
+}
+
+.about-toggle-content {
+    padding: 0 24px 24px;
+    color: #555b66;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.about-toggle-content h3 {
+    margin: 24px 0 10px;
+    color: #171717;
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+.about-toggle-content p {
+    margin: 0 0 16px;
+}
+
+.about-toggle-content ol {
+    padding-left: 24px;
+    margin: 12px 0 20px;
+}
+
+.about-toggle-content li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+    .about-toggle summary {
+        padding: 18px 16px;
+        font-size: 17px;
+    }
+
+    .about-toggle-content {
+        padding: 0 16px 20px;
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .about-toggle-content h3 {
+        font-size: 16px;
+    }
+}
