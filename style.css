@@ -1034,3 +1034,86 @@ border-radius: 16px;
 }
 
 } 
+
+/* ================= HOMEPAGE DESIGN POLISH ================= */
+
+.hero {
+    padding-top: 78px;
+    padding-bottom: 32px;
+}
+
+.hero h1 {
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+.hero p {
+    max-width: 620px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.badge {
+    padding: 9px 16px;
+    border-radius: 999px;
+    background: rgba(0, 122, 255, 0.08);
+    border: 1px solid rgba(0, 122, 255, 0.16);
+}
+
+.tool-card {
+    padding: 16px;
+    border-radius: 26px;
+    box-shadow: 0 20px 60px rgba(30, 55, 100, 0.10);
+}
+
+.drop-zone {
+    min-height: 290px;
+    border-width: 2px;
+    border-radius: 21px;
+    background: rgba(0, 122, 255, 0.025);
+}
+
+.upload-icon {
+    border-radius: 20px;
+    box-shadow: 0 8px 22px rgba(0, 122, 255, 0.10);
+}
+
+.choose-btn,
+.convert-btn {
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.choose-btn:hover,
+.convert-btn:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 122, 255, 0.18);
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding-top: 55px;
+        padding-bottom: 28px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+        line-height: 1.08;
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .tool-section {
+        width: 92%;
+    }
+
+    .drop-zone {
+        min-height: 245px;
+    }
+    }
+
+
