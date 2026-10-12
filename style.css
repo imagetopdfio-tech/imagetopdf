@@ -1475,3 +1475,11 @@ button:not(:disabled):active,
     }
 }
 
+/* Footer logo colors */
+footer .footer-logo .footer-logo-black {
+    color: #111111 !important;
+}
+
+footer .footer-logo span:not(.footer-logo-black) {
+    color: #007aff !important;
+}
