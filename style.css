@@ -817,3 +817,129 @@ footer {
     }
 
 }
+
+
+:root {
+--blue: #087cff;
+--purple: #6558e8;
+--shadow: 0 18px 55px rgba(30, 55, 100, 0.09);
+}
+
+button,
+a,
+.feature-card,
+.step,
+.blog-card,
+.tool-card {
+-webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+.drop-zone:focus-visible {
+outline: 3px solid rgba(0, 122, 255, 0.55);
+outline-offset: 4px;
+}
+
+.navbar {
+transition: box-shadow .25s ease, border-color .25s ease;
+}
+
+.navbar nav a {
+font-weight: 550;
+padding: 8px 0;
+}
+
+.hero {
+padding-bottom: 38px;
+}
+
+.badge {
+border: 1px solid rgba(0, 122, 255, .12);
+letter-spacing: .2px;
+}
+
+.tool-card,
+.feature-card,
+.step,
+.blog-card,
+.content-card {
+border-color: var(--border);
+transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.tool-card:hover,
+.feature-card:hover,
+.step:hover,
+.blog-card:hover {
+border-color: rgba(0, 122, 255, .22);
+}
+
+.drop-zone {
+background: rgba(255, 255, 255, .16);
+}
+
+.drop-zone:focus-visible {
+outline: 3px solid rgba(0, 122, 255, .35);
+outline-offset: 4px;
+}
+
+.choose-btn,
+.convert-btn {
+min-height: 48px;
+}
+
+.choose-btn:focus-visible,
+.convert-btn:focus-visible,
+.icon-btn:focus-visible,
+.menu-btn:focus-visible {
+outline: 3px solid rgba(0, 122, 255, .5);
+outline-offset: 3px;
+}
+
+.feature-card,
+.step,
+.blog-card {
+height: 100%;
+}
+
+.content-card {
+line-height: 1.75;
+}
+
+.content-card h2,
+.content-card h3 {
+line-height: 1.35;
+}
+
+@media (prefers-reduced-motion: reduce) {
+*,
+*::before,
+*::after {
+scroll-behavior: auto !important;
+animation-duration: .01ms !important;
+animation-iteration-count: 1 !important;
+transition-duration: .01ms !important;
+}
+}
+
+@media (max-width: 750px) {
+.hero h1 {
+font-size: clamp(40px, 11vw, 58px);
+}
+
+.section-title {
+    line-height: 1.15;
+}
+
+.feature-card,
+.step,
+.blog-card {
+    padding: 23px;
+}
+
+.content-card {
+    overflow-wrap: anywhere;
+}
+
+}
