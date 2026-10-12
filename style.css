@@ -1695,3 +1695,31 @@ footer .footer-logo span:not(.footer-logo-black) {
         width: 200px;
     }
     }
+
+/* Automatic horizontal review scrolling */
+
+.reviews-track {
+    overflow: hidden;
+    width: 100%;
+}
+
+.reviews-list {
+    display: flex;
+    width: max-content;
+    gap: 14px;
+    animation: reviews-scroll 28s linear infinite;
+}
+
+.reviews-track:hover .reviews-list {
+    animation-play-state: paused;
+}
+
+@keyframes reviews-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
