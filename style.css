@@ -1594,3 +1594,104 @@ footer .footer-logo span:not(.footer-logo-black) {
     width: 100%;
     margin: 0;
 }
+
+/* ================= CUSTOMER REVIEWS ================= */
+
+.reviews-card {
+    padding: 26px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.05);
+}
+
+.reviews-summary h2 {
+    margin-bottom: 16px;
+    color: #111111;
+    font-size: 23px;
+}
+
+.reviews-rating {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.rating-number {
+    color: #111111;
+    font-size: 42px;
+    font-weight: 750;
+}
+
+.rating-stars,
+.review-item span {
+    color: #f5a623;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.reviews-rating p,
+.reviews-note {
+    margin-top: 5px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.reviews-track {
+    margin-top: 24px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+}
+
+.reviews-list {
+    display: flex;
+    gap: 14px;
+    width: max-content;
+    padding-bottom: 8px;
+}
+
+.review-item {
+    width: 220px;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    background: #f9fafb;
+}
+
+.review-item strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #111111;
+}
+
+.review-item span {
+    font-size: 15px;
+}
+
+.review-item p {
+    margin-top: 9px;
+    color: #555b66;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .reviews-card {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .reviews-summary h2 {
+        font-size: 21px;
+    }
+
+    .rating-number {
+        font-size: 36px;
+    }
+
+    .review-item {
+        width: 200px;
+    }
+    }
