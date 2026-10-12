@@ -1582,3 +1582,15 @@ footer .footer-logo span:not(.footer-logo-black) {
         font-size: 16px;
     }
 }
+
+/* Separate description cards */
+.about-toggle-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.about-toggle-list .about-toggle-card {
+    width: 100%;
+    margin: 0;
+}
