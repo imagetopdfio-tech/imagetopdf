@@ -1809,3 +1809,24 @@ footer .footer-logo span:not(.footer-logo-black) {
         font-size: 13px;
     }
 }
+
+/* Fix: Tool Cards in Dark Theme */
+
+html body .quick-tools-section .quick-tool-card {
+    background: #1e293b !important;
+    background-color: #1e293b !important;
+    border: 1px solid #334155 !important;
+    color: #f8fafc !important;
+}
+
+html body .quick-tools-section .quick-tool-card h3 {
+    color: #f8fafc !important;
+}
+
+html body .quick-tools-section .quick-tool-card p {
+    color: #cbd5e1 !important;
+}
+
+html body .quick-tools-section .quick-tool-icon {
+    background: #334155 !important;
+}
