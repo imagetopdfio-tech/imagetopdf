@@ -1895,3 +1895,31 @@ body.dark .quick-tools-section .quick-tool-icon {
     background: #30313a !important;
     color: #f5f5f7 !important;
 }
+
+/* Customer Reviews - Light and Dark Theme */
+
+.reviews-card,
+.review-item {
+    background: var(--card) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+}
+
+.reviews-summary h2,
+.review-item strong {
+    color: var(--text) !important;
+}
+
+.reviews-summary p,
+.review-item p {
+    color: var(--muted) !important;
+}
+
+.reviews-rating .rating-number {
+    color: var(--text) !important;
+}
+
+.reviews-rating .rating-stars,
+.review-item span {
+    color: #ffb800 !important;
+}
