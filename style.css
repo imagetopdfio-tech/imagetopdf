@@ -1923,3 +1923,32 @@ body.dark .quick-tools-section .quick-tool-icon {
 .review-item span {
     color: #ffb800 !important;
 }
+
+
+/* Learn More Boxes - Theme Fix */
+
+.about-toggle-card {
+    background: var(--card) !important;
+    border: 1px solid var(--border) !important;
+}
+
+.about-toggle summary {
+    color: var(--text) !important;
+}
+
+.about-toggle-content {
+    color: var(--muted) !important;
+}
+
+.about-toggle-content h3 {
+    color: var(--text) !important;
+}
+
+.about-toggle-icon {
+    background: rgba(0, 122, 255, 0.12) !important;
+}
+
+.about-toggle-icon::before,
+.about-toggle-icon::after {
+    background: var(--blue) !important;
+}
