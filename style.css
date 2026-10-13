@@ -1852,3 +1852,32 @@ html body .quick-tools-section .quick-tool-icon {
 .quick-tools-section .quick-tool-icon {
     background: rgba(0, 122, 255, 0.10) !important;
 }
+
+
+/* Quick Tools - Correct Light and Dark Themes */
+
+body:not(.dark) .quick-tools-section .quick-tool-card {
+    background: rgba(255, 255, 255, 0.72) !important;
+    border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body:not(.dark) .quick-tools-section .quick-tool-card h3 {
+    color: #111111 !important;
+}
+
+body:not(.dark) .quick-tools-section .quick-tool-card p {
+    color: #6e6e73 !important;
+}
+
+body.dark .quick-tools-section .quick-tool-card {
+    background: #1c1d23 !important;
+    border-color: rgba(255, 255, 255, 0.10) !important;
+}
+
+body.dark .quick-tools-section .quick-tool-card h3 {
+    color: #f5f5f7 !important;
+}
+
+body.dark .quick-tools-section .quick-tool-card p {
+    color: #a1a1aa !important;
+}
