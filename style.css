@@ -1830,3 +1830,25 @@ html body .quick-tools-section .quick-tool-card p {
 html body .quick-tools-section .quick-tool-icon {
     background: #334155 !important;
 }
+
+
+/* Quick Tools - Follow Website Theme */
+
+.quick-tools-section .quick-tool-card {
+    background: var(--card) !important;
+    background-color: var(--card) !important;
+    border-color: var(--border) !important;
+    color: var(--text) !important;
+}
+
+.quick-tools-section .quick-tool-card h3 {
+    color: var(--text) !important;
+}
+
+.quick-tools-section .quick-tool-card p {
+    color: var(--muted) !important;
+}
+
+.quick-tools-section .quick-tool-icon {
+    background: rgba(0, 122, 255, 0.10) !important;
+}
