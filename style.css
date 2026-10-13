@@ -1977,3 +1977,17 @@ body.dark .faq-section .faq-item[open] summary::after {
     background: linear-gradient(135deg, var(--blue), var(--purple));
     color: #ffffff;
 }
+
+/* Footer Logo - Light and Dark Theme */
+
+footer .footer-logo .footer-logo-black {
+    color: #111111 !important;
+}
+
+body.dark footer .footer-logo .footer-logo-black {
+    color: #f5f5f7 !important;
+}
+
+footer .footer-logo span:not(.footer-logo-black) {
+    color: var(--blue) !important;
+}
