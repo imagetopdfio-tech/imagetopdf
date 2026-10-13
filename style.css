@@ -1991,3 +1991,18 @@ body.dark footer .footer-logo .footer-logo-black {
 footer .footer-logo span:not(.footer-logo-black) {
     color: var(--blue) !important;
 }
+
+
+/* Converter Footer Logo Theme Fix */
+
+footer .footer-logo .footer-logo-black {
+    color: #111111 !important;
+}
+
+body.dark footer .footer-logo .footer-logo-black {
+    color: #f5f5f7 !important;
+}
+
+footer .footer-logo span:not(.footer-logo-black) {
+    color: var(--blue) !important;
+}
