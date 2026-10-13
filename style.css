@@ -1952,3 +1952,28 @@ body.dark .quick-tools-section .quick-tool-icon {
 .about-toggle-icon::after {
     background: var(--blue) !important;
 }
+
+/* FAQ - Match Website Theme */
+
+.faq-section .faq-item {
+    background: var(--card) !important;
+    border-color: var(--border) !important;
+}
+
+.faq-section .faq-item summary {
+    color: var(--text) !important;
+}
+
+.faq-section .faq-item p {
+    color: var(--muted) !important;
+}
+
+body.dark .faq-section .faq-item summary::after {
+    background: #30313a;
+    color: #f5f5f7;
+}
+
+body.dark .faq-section .faq-item[open] summary::after {
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    color: #ffffff;
+}
