@@ -1,226 +1,334 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Image to PDF Blog – Tips, Guides & Tutorials | ImageToPDF.io</title>
+  <title>Image to PDF Blog: Helpful Guides & Tutorials | ImageToPDF.io</title>
+  <meta name="description" content="Explore practical guides on converting JPG, PNG, WEBP and other images to PDF. Learn simple steps, useful tips and ways to manage your files.">
+  <meta name="author" content="ImageToPDF.io">
+  <link rel="canonical" href="https://imagetopdf.io/blog/">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="stylesheet" href="../style.css">
 
-    <meta name="description"
-          content="Learn about image to PDF conversion, JPG, PNG and WEBP files, PDF tips, guides and useful online file tools.">
+  <meta property="og:title" content="Image to PDF Blog | ImageToPDF.io">
+  <meta property="og:description" content="Simple, helpful guides for converting images to PDF.">
+  <meta property="og:url" content="https://imagetopdf.io/blog/">
+  <meta property="og:type" content="website">
 
-    <meta name="author" content="ImageToPDF.io">
+  <style>
+    .blog-intro {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-    <link rel="canonical"
-          href="https://imagetopdf.io/blog/">
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
 
-    <link rel="icon"
-          type="image/png"
-          href="../favicon.png">
+    .blog-card {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--card);
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
 
-    <link rel="stylesheet"
-          href="../style.css">
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .blog-card-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      background: var(--card-solid);
+    }
+
+    .blog-card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex: 1;
+    }
+
+    .blog-category {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+      margin-bottom: 10px;
+    }
+
+    .blog-card h2 {
+      color: var(--text);
+      font-size: 20px;
+      line-height: 1.4;
+      margin: 0 0 12px;
+    }
+
+    .blog-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+      margin: 0 0 20px;
+    }
+
+    .blog-read-more {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: auto;
+    }
+
+    .blog-read-more:hover {
+      text-decoration: underline;
+    }
+
+    .blog-bottom-cta {
+      margin-top: 44px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--card);
+      text-align: center;
+    }
+
+    .blog-bottom-cta h2 {
+      color: var(--text);
+      margin-top: 0;
+    }
+
+    .blog-bottom-cta p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .blog-tool-link {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      .blog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .blog-card-body {
+        padding: 18px;
+      }
+
+      .blog-card h2 {
+        font-size: 19px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header class="navbar">
+  <a href="../" class="logo">Image<span>ToPDF</span></a>
 
-    <a href="../" class="logo">
-        Image<span>ToPDF</span>
-    </a>
+  <nav id="navMenu">
+    <a href="../">Home</a>
+    <a href="../about/">About</a>
+    <a href="../jpg-to-pdf/">JPG to PDF</a>
+    <a href="../png-to-pdf/">PNG to PDF</a>
+    <a href="../image-to-pdf/">Image to PDF</a>
+    <a href="../webp-to-pdf/">WEBP to PDF</a>
+    <a href="./">Blog</a>
+    <a href="../contact/">Contact</a>
+  </nav>
 
-    <nav id="navMenu">
-
-        <a href="../">Home</a>
-        <a href="../jpg-to-pdf/">JPG to PDF</a>
-        <a href="../png-to-pdf/">PNG to PDF</a>
-        <a href="../image-to-pdf/">Image to PDF</a>
-        <a href="../webp-to-pdf/">WEBP to PDF</a>
-        <a href="./">Blog</a>
-
-    </nav>
-
-    <div class="nav-actions">
-
-        <button
-            class="icon-btn"
-            onclick="toggleTheme()"
-            aria-label="Toggle theme">
-            ◐
-        </button>
-
-        <button
-            class="menu-btn"
-            onclick="toggleMenu()"
-            aria-label="Menu">
-            ☰
-        </button>
-
-    </div>
-
+  <div class="nav-actions">
+    <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">☰</button>
+  </div>
 </header>
-
 
 <main class="page active">
 
-    <section class="hero">
+  <section class="hero">
+    <div class="badge">✦ ImageToPDF.io Blog</div>
 
-        <div class="badge">
-            ✦ ImageToPDF.io Blog
-        </div>
+    <div class="blog-intro">
+      <h1>Simple Tips for <span>Working with PDFs.</span></h1>
+      <p>
+        Need to turn photos into a document or get your files ready to share?
+        Explore our straightforward guides to image formats, PDF conversion
+        and useful everyday workflows.
+      </p>
+    </div>
+  </section>
 
-        <h1>
-            PDF Tips &
-            <span>Guides.</span>
-        </h1>
+  <section class="section">
+    <div class="container">
 
-        <p>
-            Helpful guides, tutorials and tips for working with
-            images and PDF files.
-        </p>
+      <h2 class="section-title">Latest Guides</h2>
+      <p class="section-description" style="text-align:center">
+        Practical instructions to help you get more from your image files.
+      </p>
 
-    </section>
+      <div class="blog-grid">
 
-
-    <section class="section">
-
-        <div class="container">
-
-            <article class="content-card">
-
-                <h2>Image to PDF Guides</h2>
-
-                <p>
-                    Welcome to the ImageToPDF.io blog. Here we share
-                    simple guides and useful information about converting
-                    images to PDF files and working with common image
-                    formats.
-                </p>
-
-
-                <h2>JPG to PDF</h2>
-
-                <p>
-                    Learn how to convert JPG images into PDF documents,
-                    when PDF format is useful and how to prepare images
-                    for better results.
-                </p>
-
-                <p>
-                    <a href="../jpg-to-pdf/">
-                        Use our free JPG to PDF converter →p
-                    </a>
-                </p>
-
-
-                <h2>PNG to PDF</h2>
-
-                <p>
-                    Discover how PNG images can be converted into PDF
-                    files and learn about common uses for PNG and PDF
-                    formats.
-                </p>
-
-                <p>
-                    <a href="../png-to-pdf/">
-                        Use our free PNG to PDF converter →
-                    </a>
-                </p>
-                <p>
-    <a href="../blog/how-to-convert-png-to-pdf/">
-        Read: How to Convert PNG to PDF →
-    </a>
-                </p>
-
-<h2>WEBP to PDF</h2>
-
-<p>
-    Learn how to convert WEBP images into PDF documents
-    and when PDF format is useful for sharing, printing
-    and organizing images.
-</p>
-
-<p>
-    <a href="../webp-to-pdf/">
-        Use our free WEBP to PDF converter →
-    </a>
-</p>
-
-<p>
-    <a href="../blog/how-to-convert-webp-to-pdf/">
-        Read: How to Convert WEBP to PDF →
-    </a>
-</p>
-
-   <h2>How to Convert JPG to PDF in Google Drive</h2>
-
-<p>
-    Learn how to convert JPG images to PDF using Google Drive
-    and Google Docs with this simple step-by-step guide.
-</p>
-
-<p>
-    <a href="../blog/how-to-convert-jpg-to-pdf-in-google-drive/">
-        Read: How to Convert JPG to PDF in Google Drive →
-    </a>
-</p>             
-
-
-                <h2>More Guides Coming Soon</h2>
-
-                <p>
-                    We plan to publish more practical articles covering
-                    image formats, PDF conversion, file management,
-                    online tools and useful digital workflows.
-                </p>
-
-            </article>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<footer>
-
-    <div class="container footer-content">
-
-        <div>
-
-            <a href="../" class="logo">
-                Image<span>ToPDF</span>
-            </a>
-
+        <article class="blog-card">
+          <img class="blog-card-image"
+               src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80"
+               alt="Paper notes and documents arranged on a desk"
+               loading="lazy">
+          <div class="blog-card-body">
+            <span class="blog-category">PDF Basics</span>
+            <h2>How to Convert Images to PDF</h2>
             <p>
-                Simple online tools for everyday digital files.
+              Have several photos or screenshots to share? Learn how to
+              bring image files together in a single PDF using a simple
+              browser-based process.
             </p>
+            <a class="blog-read-more" href="./how-to-convert-image-to-pdf/">
+              Read More →
+            </a>
+          </div>
+        </article>
 
-            <small>
-                © 2026 ImageToPDF.io. All rights reserved.
-            </small>
+        <article class="blog-card">
+          <img class="blog-card-image"
+               src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+               alt="Laptop on a desk for working with digital files"
+               loading="lazy">
+          <div class="blog-card-body">
+            <span class="blog-category">JPG Guide</span>
+            <h2>How to Convert JPG to PDF</h2>
+            <p>
+              Follow a clear step-by-step guide to convert JPG photos
+              into a PDF that is easier to share, print or keep with
+              your documents.
+            </p>
+            <a class="blog-read-more" href="./how-to-convert-jpg-to-pdf/">
+              Read More →
+            </a>
+          </div>
+        </article>
 
-        </div>
+        <article class="blog-card">
+          <img class="blog-card-image"
+               src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
+               alt="Person organising paperwork at a desk"
+               loading="lazy">
+          <div class="blog-card-body">
+            <span class="blog-category">Google Drive</span>
+            <h2>How to Convert JPG to PDF in Google Drive</h2>
+            <p>
+              Explore a practical workflow for working with JPG images
+              and Google Drive. Learn what to check before saving or
+              sharing your finished document.
+            </p>
+            <a class="blog-read-more" href="./how-to-convert-jpg-to-pdf-in-google-drive/">
+              Read More →
+            </a>
+          </div>
+        </article>
 
-        <div class="footer-links">
+        <article class="blog-card">
+          <img class="blog-card-image"
+               src="https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=900&q=80"
+               alt="Digital illustration and graphic design on a screen"
+               loading="lazy">
+          <div class="blog-card-body">
+            <span class="blog-category">PNG Guide</span>
+            <h2>How to Convert PNG to PDF</h2>
+            <p>
+              PNG files are common for screenshots, graphics and
+              transparent images. Find out how to convert them into
+              a convenient PDF document.
+            </p>
+            <a class="blog-read-more" href="./how-to-convert-png-to-pdf/">
+              Read More →
+            </a>
+          </div>
+        </article>
 
-            <a href="../">Home</a>
-            <a href="../about/">About</a>
-            <a href="../contact/">Contact</a>
-            <a href="../privacy-policy/">Privacy Policy</a>
-            <a href="../terms/">Terms</a>
-            <a href="../disclaimer/">Disclaimer</a>
+        <article class="blog-card">
+          <img class="blog-card-image"
+               src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=900&q=80"
+               alt="Computer workspace used for digital tasks"
+               loading="lazy">
+          <div class="blog-card-body">
+            <span class="blog-category">WEBP Guide</span>
+            <h2>How to Convert WEBP to PDF</h2>
+            <p>
+              Have WEBP images that you need to share or print?
+              Learn the basics of converting web-friendly images
+              into a PDF file.
+            </p>
+            <a class="blog-read-more" href="./how-to-convert-webp-to-pdf/">
+              Read More →
+            </a>
+          </div>
+        </article>
 
-        </div>
+      </div>
+
+      <div class="blog-bottom-cta">
+        <h2>Ready to Convert Your Images?</h2>
+        <p>
+          Select JPG, PNG or WEBP images and create a PDF directly
+          in your browser.
+        </p>
+        <a class="blog-tool-link" href="../">
+          Open Image to PDF Converter →
+        </a>
+      </div>
 
     </div>
+  </section>
+</main>
 
+<footer>
+  <div class="container footer-content">
+    <div>
+      <a href="../" class="logo">Image<span>ToPDF</span></a>
+      <p>Simple online tools for everyday digital files.</p>
+      <small>© 2026 ImageToPDF.io. All rights reserved.</small>
+    </div>
+
+    <div class="footer-links">
+      <a href="../">Home</a>
+      <a href="../about/">About</a>
+      <a href="../contact/">Contact</a>
+      <a href="../privacy-policy/">Privacy Policy</a>
+      <a href="../terms/">Terms</a>
+      <a href="../disclaimer/">Disclaimer</a>
+    </div>
+  </div>
 </footer>
 
-
 <script src="../script.js"></script>
-
 </body>
-      </html>
+    </html>
+
