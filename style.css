@@ -2018,3 +2018,16 @@ footer a.footer-logo span:not(.footer-logo-black) {
     color: #007aff !important;
 }
 
+
+
+/* FINAL FIX: Footer logo colors on all pages */
+html body footer a.logo.footer-logo span.footer-logo-black {
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+}
+
+html body footer a.logo.footer-logo span:not(.footer-logo-black) {
+    color: #007aff !important;
+    -webkit-text-fill-color: #007aff !important;
+}
+
