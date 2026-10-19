@@ -2006,3 +2006,16 @@ body.dark footer .footer-logo .footer-logo-black {
 footer .footer-logo span:not(.footer-logo-black) {
     color: var(--blue) !important;
 }
+
+
+/* Fix footer logo colors */
+footer .footer-logo,
+footer .footer-logo .footer-logo-black {
+    color: #111111 !important;
+}
+
+footer .footer-logo span:not(.footer-logo-black) {
+    color: #007aff !important;
+}
+
+
