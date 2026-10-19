@@ -127,6 +127,48 @@
       text-decoration: none;
     }
 
+/* Blog Pagination */
+.blog-card.is-hidden {
+  display: none;
+}
+
+.blog-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 36px 0 12px;
+}
+
+.blog-page-btn {
+  min-width: 42px;
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.blog-page-btn:hover,
+.blog-page-btn.active {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+
+.blog-page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+      
+    
     @media (max-width: 900px) {
       .blog-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -531,7 +573,14 @@
   </div>
         </article>
         
-
+      </div>
+      <div class="blog-pagination" id="blogPagination">
+  <button class="blog-page-btn" id="prevPage" type="button">←</button>
+  <button class="blog-page-btn active" data-page="1" type="button">1</button>
+  <button class="blog-page-btn" data-page="2" type="button">2</button>
+  <button class="blog-page-btn" data-page="3" type="button">3</button>
+  <button class="blog-page-btn" id="nextPage" type="button">→</button>
+      </div>
       <div class="blog-bottom-cta">
         <h2>Ready to Convert Your Images?</h2>
         <p>
@@ -566,7 +615,59 @@
   </div>
 </footer>
 
+
+  
 <script src="../script.js"></script>
+
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = Array.from(document.querySelectorAll(".blog-grid .blog-card"));
+  const buttons = document.querySelectorAll(".blog-page-btn[data-page]");
+  const prev = document.getElementById("prevPage");
+  const next = document.getElementById("nextPage");
+  const perPage = 9;
+  const totalPages = Math.ceil(cards.length / perPage);
+  let currentPage = 1;
+
+  function showPage(page) {
+    currentPage = Math.max(1, Math.min(page, totalPages));
+
+    cards.forEach((card, index) => {
+      const start = (currentPage - 1) * perPage;
+      card.classList.toggle(
+        "is-hidden",
+        index < start || index >= start + perPage
+      );
+    });
+
+    buttons.forEach(button => {
+      const active = Number(button.dataset.page) === currentPage;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-current", active ? "page" : "false");
+    });
+
+    if (prev) prev.disabled = currentPage === 1;
+    if (next) next.disabled = currentPage === totalPages;
+  }
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      showPage(Number(button.dataset.page));
+    });
+  });
+
+  if (prev) prev.addEventListener("click", () => showPage(currentPage - 1));
+  if (next) next.addEventListener("click", () => showPage(currentPage + 1));
+
+  showPage(1);
+});
+  </script>
+
+
+  
+
+  
 </body>
     </html>
 
