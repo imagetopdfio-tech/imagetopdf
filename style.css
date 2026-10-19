@@ -2008,14 +2008,13 @@ footer .footer-logo span:not(.footer-logo-black) {
 }
 
 
-/* Fix footer logo colors */
-footer .footer-logo,
-footer .footer-logo .footer-logo-black {
+
+/* Footer logo colors */
+footer a.footer-logo .footer-logo-black {
     color: #111111 !important;
 }
 
-footer .footer-logo span:not(.footer-logo-black) {
+footer a.footer-logo span:not(.footer-logo-black) {
     color: #007aff !important;
 }
-
 
